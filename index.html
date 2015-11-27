@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Workout</title>
+	<link href='https://fonts.googleapis.com/css?family=Maven+Pro' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+	<div class="Workout">
+		<h1 class="Workout__heading">{{ name }}'s status</h1>
+		<h2 class="Workout__status">
+			Pushups | {{ workout.pushups }}
+			<button v-on:click="addPushups()">
+				+10
+			</button>
+		</h2>
+		<h2 class="Workout__status">
+			Situps | {{ workout.situps }}
+			<button v-on:click="addSitups()">
+				+10
+			</button>
+		</h2>
+		<h2 class="Workout__status">
+			<button v-on:click="reset()">Reset</button>
+		</h2>	
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.10/vue.js"></script>
+	<script src="workout.js"></script>					
+</body>
+</html>
